@@ -145,7 +145,7 @@ This repo was tested on Python 3.5+ and PyTorch 0.4.1/1.0.0. The requirements ar
 
 ## Results
 
-We didn't search best parametres and obtained the following results.
+We didn't search best parameters and obtained the following results.
 
 ### Overall results
 
