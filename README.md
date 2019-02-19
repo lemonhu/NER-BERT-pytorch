@@ -1,6 +1,8 @@
 # BERT-NER-pytorch
 
-**PyTorch solution of [Named Entity Recognition](https://en.wikipedia.org/wiki/Named-entity_recognition) task with Google AI's BERT model.**
+**PyTorch solution of Chinese [Named Entity Recognition](https://en.wikipedia.org/wiki/Named-entity_recognition) task with Google AI's BERT model.**
+
+利用Google AI的BERT模型进行中文命名实体识别任务的PyTorch实现。
 
 Welcome to watch, star or fork.
 
