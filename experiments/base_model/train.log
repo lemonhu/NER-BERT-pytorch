@@ -1,0 +1,71 @@
+2019-01-25 03:16:21,103:INFO: device: cuda, n_gpu: 2, 16-bits training: True
+2019-01-25 03:16:21,103:INFO: Loading the datasets...
+2019-01-25 03:16:21,103:INFO: loading vocabulary file bert-base-chinese-pytorch/vocab.txt
+2019-01-25 03:16:57,753:INFO: loading archive file bert-base-chinese-pytorch
+2019-01-25 03:16:57,754:INFO: Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "directionality": "bidi",
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "type_vocab_size": 2,
+  "vocab_size": 21128
+}
+
+2019-01-25 03:17:05,248:INFO: Weights of BertForTokenClassification not initialized from pretrained model: ['classifier.weight', 'classifier.bias']
+2019-01-25 03:17:05,249:INFO: Weights from pretrained model not used in BertForTokenClassification: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias']
+2019-01-25 03:17:10,119:INFO: Starting training for 20 epoch(s)
+2019-01-25 03:17:10,119:INFO: Epoch 1/20
+2019-01-25 03:29:39,999:INFO: - Train metrics: loss: 00.00; f1: 95.90
+2019-01-25 03:30:02,809:INFO: - Val metrics: loss: 00.01; f1: 93.77
+2019-01-25 03:30:16,565:INFO: - Found new best F1
+2019-01-25 03:30:16,565:INFO: Epoch 2/20
+2019-01-25 03:42:35,186:INFO: - Train metrics: loss: 00.00; f1: 98.20
+2019-01-25 03:42:58,057:INFO: - Val metrics: loss: 00.01; f1: 95.16
+2019-01-25 03:43:11,751:INFO: - Found new best F1
+2019-01-25 03:43:11,751:INFO: Epoch 3/20
+2019-01-25 03:55:24,783:INFO: - Train metrics: loss: 00.00; f1: 98.93
+2019-01-25 03:55:47,373:INFO: - Val metrics: loss: 00.02; f1: 95.06
+2019-01-25 03:55:51,971:INFO: Epoch 4/20
+2019-01-25 04:07:54,169:INFO: - Train metrics: loss: 00.00; f1: 99.15
+2019-01-25 04:08:16,586:INFO: - Val metrics: loss: 00.02; f1: 95.22
+2019-01-25 04:08:23,019:INFO: - Found new best F1
+2019-01-25 04:08:23,019:INFO: Epoch 5/20
+2019-01-25 04:20:33,775:INFO: - Train metrics: loss: 00.00; f1: 99.39
+2019-01-25 04:20:56,560:INFO: - Val metrics: loss: 00.02; f1: 95.37
+2019-01-25 04:21:10,005:INFO: - Found new best F1
+2019-01-25 04:21:10,005:INFO: Epoch 6/20
+2019-01-25 04:33:15,432:INFO: - Train metrics: loss: 00.00; f1: 99.54
+2019-01-25 04:33:37,989:INFO: - Val metrics: loss: 00.02; f1: 95.50
+2019-01-25 04:33:51,402:INFO: - Found new best F1
+2019-01-25 04:33:51,402:INFO: Epoch 7/20
+2019-01-25 04:45:52,903:INFO: - Train metrics: loss: 00.00; f1: 99.58
+2019-01-25 04:46:15,469:INFO: - Val metrics: loss: 00.03; f1: 95.39
+2019-01-25 04:46:20,443:INFO: Epoch 8/20
+2019-01-25 04:58:27,467:INFO: - Train metrics: loss: 00.00; f1: 99.59
+2019-01-25 04:58:50,161:INFO: - Val metrics: loss: 00.03; f1: 95.30
+2019-01-25 04:58:54,659:INFO: Epoch 9/20
+2019-01-25 05:10:58,331:INFO: - Train metrics: loss: 00.00; f1: 99.71
+2019-01-25 05:11:20,969:INFO: - Val metrics: loss: 00.03; f1: 95.89
+2019-01-25 05:11:33,933:INFO: - Found new best F1
+2019-01-25 05:11:33,933:INFO: Epoch 10/20
+2019-01-25 05:23:34,668:INFO: - Train metrics: loss: 00.00; f1: 99.59
+2019-01-25 05:23:57,161:INFO: - Val metrics: loss: 00.03; f1: 95.42
+2019-01-25 05:24:01,986:INFO: Epoch 11/20
+2019-01-25 05:36:07,205:INFO: - Train metrics: loss: 00.00; f1: 99.88
+2019-01-25 05:36:29,956:INFO: - Val metrics: loss: 00.03; f1: 95.90
+2019-01-25 05:36:42,835:INFO: - Found new best F1
+2019-01-25 05:36:42,836:INFO: Epoch 12/20
+2019-01-25 05:48:44,861:INFO: - Train metrics: loss: 00.00; f1: 99.90
+2019-01-25 05:49:07,503:INFO: - Val metrics: loss: 00.03; f1: 95.88
+2019-01-25 05:49:12,045:INFO: Best val f1: 95.90

@@ -1,0 +1,30 @@
+2019-01-25 06:02:04,374:INFO: Loading the dataset...
+2019-01-25 06:02:04,375:INFO: loading vocabulary file bert-base-chinese-pytorch/vocab.txt
+2019-01-25 06:02:07,316:INFO: - done.
+2019-01-25 06:14:53,570:INFO: Loading the dataset...
+2019-01-25 06:14:53,571:INFO: loading vocabulary file bert-base-chinese-pytorch/vocab.txt
+2019-01-25 06:14:56,541:INFO: - done.
+2019-01-25 06:15:09,225:INFO: Starting evaluation...
+2019-01-25 06:18:01,725:INFO: Loading the dataset...
+2019-01-25 06:18:01,725:INFO: loading vocabulary file bert-base-chinese-pytorch/vocab.txt
+2019-01-25 06:18:04,699:INFO: - done.
+2019-01-25 06:18:33,110:INFO: Loading the dataset...
+2019-01-25 06:18:33,111:INFO: loading vocabulary file bert-base-chinese-pytorch/vocab.txt
+2019-01-25 06:18:36,071:INFO: - done.
+2019-01-25 06:23:14,208:INFO: Loading the dataset...
+2019-01-25 06:23:14,209:INFO: loading vocabulary file bert-base-chinese-pytorch/vocab.txt
+2019-01-25 06:23:17,196:INFO: - done.
+2019-01-25 06:23:29,837:INFO: Starting evaluation...
+2019-01-25 06:24:46,034:INFO: Loading the dataset...
+2019-01-25 06:24:46,034:INFO: loading vocabulary file bert-base-chinese-pytorch/vocab.txt
+2019-01-25 06:24:48,985:INFO: - done.
+2019-01-25 06:25:00,235:INFO: Starting evaluation...
+2019-01-25 06:25:36,190:INFO: - Test metrics: loss: 00.04; f1: 94.62
+2019-01-25 06:25:37,963:INFO:              precision    recall  f1-score   support
+
+        ORG      89.64     92.07     90.84      1287
+        LOC      95.92     95.13     95.52      2790
+        PER      96.36     96.43     96.39      1372
+
+avg / total      94.54     94.73     94.63      5449
+
