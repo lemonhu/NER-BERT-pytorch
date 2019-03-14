@@ -1,8 +1,6 @@
 # BERT-NER-pytorch
 
-**PyTorch solution of Chinese [Named Entity Recognition](https://en.wikipedia.org/wiki/Named-entity_recognition) task with Google AI's BERT model.**
-
-利用Google AI的BERT模型进行中文命名实体识别任务的PyTorch实现。
+**PyTorch solution of [Named Entity Recognition](https://en.wikipedia.org/wiki/Named-entity_recognition) task with Google AI's BERT model.**
 
 Welcome to watch, star or fork.
 
@@ -52,8 +50,9 @@ This repo was tested on Python 3.5+ and PyTorch 0.4.1/1.0.0. The requirements ar
 - torch >= 0.4.1
 - pytorch-pretrained-bert >= 0.4.0
 - tqdm
+- apex
 
-**Note**: The tensorflow library is only used for the conversion of pre-trained models from TensorFlow to PyTorch.
+**Note**: The tensorflow library is only used for the conversion of pre-trained models from TensorFlow to PyTorch. apex is a tool for easy mixed precision and distributed training in Pytorch, please see https://github.com/NVIDIA/apex.
 
 ## Usage
 
@@ -153,21 +152,21 @@ We didn't search best parameters and obtained the following results.
 
 Based on the best performance of the model on the validation set, the overall effect of the model is as follows:
 
-|  Dataset   | F1_score |
-| :--------: | :------: |
-|  training  |          |
-| validation |          |
-|    test    |          |
+|  Dataset   | F1_score  |
+| :--------: | :-------: |
+|  training  |   99.88   |
+| validation | **95.90** |
+|    test    | **94.62** |
 
 ### Detail results on test set
 
-Based on the best model, the effect of the model on each entity category as follows:
+Based on the best model on the validation set, we can get the recognition effect of each entity type on the test set.
 
-|              | Precison | Recall | F1_score |
-| :----------: | :------: | :----: | :------: |
-|    person    |          |        |          |
-| organization |          |        |          |
-|   location   |          |        |          |
+| NE Types | Precison | Recall | F1_score  |
+| :------: | :------: | :----: | :-------: |
+|   PER    |  96.36   | 96.43  | **96.39** |
+|   ORG    |  89.64   | 92.07  | **90.84** |
+|   LOC    |  95.92   | 95.13  | **95.52** |
 
 ## References
 
