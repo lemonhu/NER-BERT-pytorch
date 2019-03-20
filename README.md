@@ -1,4 +1,4 @@
-# BERT-NER-pytorch
+# NER-BERT-pytorch
 
 **PyTorch solution of [Named Entity Recognition](https://en.wikipedia.org/wiki/Named-entity_recognition) task with Google AI's BERT model.**
 
@@ -36,11 +36,11 @@ The format is similar to that of the Co-NLL NER task 2002, adapted for Chinese. 
 
 We randomly select 3000 samples from the training set as the validation set, and the test set is unchanged. Thus, the dataset distribution is as follows.
 
-|  Dataset   | Number |
-| :--------: | :----: |
-|  training  | 42000  |
-| validation |  3000  |
-|    test    |  3442  |
+|    Dataset     | Number |
+| :------------: | :----: |
+|  training set  | 42000  |
+| validation set |  3000  |
+|    test set    |  3442  |
 
 ## Requirements
 
@@ -53,6 +53,30 @@ This repo was tested on Python 3.5+ and PyTorch 0.4.1/1.0.0. The requirements ar
 - apex
 
 **Note**: The tensorflow library is only used for the conversion of pre-trained models from TensorFlow to PyTorch. apex is a tool for easy mixed precision and distributed training in Pytorch, please see https://github.com/NVIDIA/apex.
+
+## Results
+
+We didn't search best parameters and obtained the following results.
+
+### Overall results
+
+Based on the best performance of the model on the validation set, the overall effect of the model is as follows:
+
+|    Dataset     | F1_score  |
+| :------------: | :-------: |
+|  training set  |   99.88   |
+| validation set | **95.90** |
+|    test set    | **94.62** |
+
+### Detail results on test set
+
+Based on the best model on the validation set, we can get the recognition effect of each entity type on the test set.
+
+| NE Types | Precison | Recall | F1_score  |
+| :------: | :------: | :----: | :-------: |
+|   PER    |  96.36   | 96.43  | **96.39** |
+|   ORG    |  89.64   | 92.07  | **90.84** |
+|   LOC    |  95.92   | 95.13  | **95.52** |
 
 ## Usage
 
@@ -144,33 +168,10 @@ This repo was tested on Python 3.5+ and PyTorch 0.4.1/1.0.0. The requirements ar
    python evaluate.py --data_dir data/msr --bert_model_dir bert-base-chinese-pytorch --model_dir experiments/base_model
    ```
 
-## Results
-
-We didn't search best parameters and obtained the following results.
-
-### Overall results
-
-Based on the best performance of the model on the validation set, the overall effect of the model is as follows:
-
-|  Dataset   | F1_score  |
-| :--------: | :-------: |
-|  training  |   99.88   |
-| validation | **95.90** |
-|    test    | **94.62** |
-
-### Detail results on test set
-
-Based on the best model on the validation set, we can get the recognition effect of each entity type on the test set.
-
-| NE Types | Precison | Recall | F1_score  |
-| :------: | :------: | :----: | :-------: |
-|   PER    |  96.36   | 96.43  | **96.39** |
-|   ORG    |  89.64   | 92.07  | **90.84** |
-|   LOC    |  95.92   | 95.13  | **95.52** |
-
 ## References
 
+- Devlin et al. BERT: Pre-training of Deep Bidirectional Trasnsformers for Language Understanding (2018) [[paper]](https://arxiv.org/pdf/1810.04805.pdf)
 - google-research/bert [[github]](https://github.com/google-research/bert)
 - huggingface/pytorch-pretrained-BERT [[github]](https://github.com/huggingface/pytorch-pretrained-BERT)
 - NVIDIA/apex [[github]](https://github.com/NVIDIA/apex)
-- Devlin et al. BERT: Pre-training of Deep Bidirectional Trasnsformers for Language Understanding (2018) [[paper]](https://arxiv.org/pdf/1810.04805.pdf)
+- chakki-works/seqeval [[github]](https://github.com/chakki-works/seqeval)
