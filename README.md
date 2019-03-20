@@ -2,6 +2,8 @@
 
 **PyTorch solution of [Named Entity Recognition](https://en.wikipedia.org/wiki/Named-entity_recognition) task with Google AI's BERT model.**
 
+利用Google AI的BERT模型进行中文命名实体识别任务的PyTorch实现。
+
 Welcome to watch, star or fork.
 
 <div align=center><img src="./img/model.png" width="500px"></div>
@@ -72,11 +74,11 @@ Based on the best performance of the model on the validation set, the overall ef
 
 Based on the best model on the validation set, we can get the recognition effect of each entity type on the test set.
 
-| NE Types | Precison | Recall | F1_score  |
-| :------: | :------: | :----: | :-------: |
-|   PER    |  96.36   | 96.43  | **96.39** |
-|   ORG    |  89.64   | 92.07  | **90.84** |
-|   LOC    |  95.92   | 95.13  | **95.52** |
+| NE Types | Precison | Recall | F1_score |
+| :------: | :------: | :----: | :------: |
+|   PER    |  96.36   | 96.43  |  96.39   |
+|   ORG    |  89.64   | 92.07  |  90.84   |
+|   LOC    |  95.92   | 95.13  |  95.52   |
 
 ## Usage
 
