@@ -92,7 +92,7 @@ Based on the best model on the validation set, we can get the recognition effect
 
    - **Convert the TensorFlow checkpoint to a PyTorch dump by yourself**
 
-     - Download the Google's BERT base model for Chinese from **[`BERT-Base, Chinese`](https://storage.googleapis.com/bert_models/2018_11_23/multi_cased_L-12_H-768_A-12.zip)** (Chinese Simplified and Traditional, 12-layer, 768-hidden, 12-heads, 110M parameters), and decompress it.
+     - Download the Google's BERT base model for Chinese from **[`BERT-Base, Chinese`](https://storage.googleapis.com/bert_models/2018_11_03/chinese_L-12_H-768_A-12.zip)** (Chinese Simplified and Traditional, 12-layer, 768-hidden, 12-heads, 110M parameters), and decompress it.
 
      - Execute the following command,  convert the TensorFlow checkpoint to a PyTorch dump.
 
