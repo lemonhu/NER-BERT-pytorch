@@ -2,11 +2,11 @@
     "full_finetuning": true,
     "max_len": 180,
 
-    "learning_rate": 5e-5,
+    "learning_rate": 3e-5,
     "weight_decay": 0.01,
     "clip_grad": 2,
 
-    "batch_size": 10,
+    "batch_size": 30,
     "epoch_num": 20,
     "min_epoch_num": 5,
     "patience": 0.02,
