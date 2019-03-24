@@ -50,7 +50,7 @@ This repo was tested on Python 3.5+ and PyTorch 0.4.1/1.0.0. The requirements ar
 
 - tensorflow >= 1.11.0
 - torch >= 0.4.1
-- pytorch-pretrained-bert >= 0.4.0
+- pytorch-pretrained-bert == 0.4.0
 - tqdm
 - apex
 
@@ -98,7 +98,7 @@ Based on the best model on the validation set, we can get the recognition effect
 
        ```shell
        export TF_BERT_BASE_DIR=/path/to/chinese_L-12_H-768_A-12
-       export PT_BERT_BASE_DIR=/path/to/BERT-NER-pytorch/bert-base-chinese-pytorch
+       export PT_BERT_BASE_DIR=/path/to/NER-BERT-pytorch/bert-base-chinese-pytorch
        
        pytorch_pretrained_bert convert_tf_checkpoint_to_pytorch \
        	$TF_BERT_BASE_DIR/bert_model.ckpt \
@@ -149,7 +149,7 @@ Based on the best model on the validation set, we can get the recognition effect
    Or specify parameters on the command line
 
    ```shell
-   python train.py --data_dir data/msr --bert_model_dir bert-base-chinese-pytorch --model_dir experiments/base_model
+   python train.py --data_dir data/msra --bert_model_dir bert-base-chinese-pytorch --model_dir experiments/base_model --multi_gpu
    ```
 
    It will instantiate a model and train it on the training set following the hyperparameters specified in `params.json`. It will also evaluate some metrics on the development set.
@@ -167,7 +167,7 @@ Based on the best model on the validation set, we can get the recognition effect
    Or specify parameters on the command line
 
    ```shell
-   python evaluate.py --data_dir data/msr --bert_model_dir bert-base-chinese-pytorch --model_dir experiments/base_model
+   python evaluate.py --data_dir data/msra --bert_model_dir bert-base-chinese-pytorch --model_dir experiments/base_model
    ```
 
 ## References
