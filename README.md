@@ -48,9 +48,8 @@ We randomly select 3000 samples from the training set as the validation set, and
 
 This repo was tested on Python 3.5+ and PyTorch 0.4.1/1.0.0. The requirements are:
 
-- tensorflow >= 1.11.0
-- torch >= 0.4.1
-- pytorch-pretrained-bert == 0.4.0
+- torch >= 1.10.0
+- transformers > 4.12.0
 - tqdm
 - apex
 
@@ -84,34 +83,7 @@ Based on the best model on the validation set, we can get the recognition effect
 
 1. **Get BERT model for PyTorch**
 
-   There are two ways to get the pre-trained BERT model in a PyTorch dump for your experiments :
-
-   - **Direct download of the converted pytorch version of the BERT model**
-
-     You can download the pytorch dump I converted from the tensorflow checkpont from my Google Cloud Drive folder [`bert-base-chinese-pytorch`](https://drive.google.com/drive/folders/1K_xCYMCEfjpPjedSnMyL9zMVzqbanQX9), including the BERT parameters file `bert_config.json`, the model file `pytorch_model.bin` and the vocabulary file `vocab.txt`.
-
-   - **Convert the TensorFlow checkpoint to a PyTorch dump by yourself**
-
-     - Download the Google's BERT base model for Chinese from **[`BERT-Base, Chinese`](https://storage.googleapis.com/bert_models/2018_11_03/chinese_L-12_H-768_A-12.zip)** (Chinese Simplified and Traditional, 12-layer, 768-hidden, 12-heads, 110M parameters), and decompress it.
-
-     - Execute the following command,  convert the TensorFlow checkpoint to a PyTorch dump.
-
-       ```shell
-       export TF_BERT_BASE_DIR=/path/to/chinese_L-12_H-768_A-12
-       export PT_BERT_BASE_DIR=/path/to/NER-BERT-pytorch/bert-base-chinese-pytorch
-       
-       pytorch_pretrained_bert convert_tf_checkpoint_to_pytorch \
-       	$TF_BERT_BASE_DIR/bert_model.ckpt \
-       	$TF_BERT_BASE_DIR/bert_config.json \
-       	$PT_BERT_BASE_DIR/pytorch_model.bin
-       ```
-
-     - Copy the BERT parameters file `bert_config.json` and dictionary file `vocab.txt` to the directory `$PT_BERT_BASE_DIR`.
-
-       ```shell
-       cp $TF_BERT_BASE_DIR/bert_config.json $PT_BERT_BASE_DIR/bert_config.json
-       cp $TF_BERT_BASE_DIR/vocab.txt $PT_BERT_BASE_DIR/vocab.txt
-       ```
+   do nothing ( it can donwload bert-base-chinese automatically)
 
 2. **Build dataset and tags**
 
