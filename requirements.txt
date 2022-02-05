@@ -1,5 +1,5 @@
 # PyTorch
-torch >= 0.4.1
+torch >= 1.10.0
 # progress bars in model download and training scripts
 tqdm
 # A PyTorch implementation of Google AI's BERT model
