@@ -11,7 +11,7 @@ import torch.nn as nn
 from torch.optim.lr_scheduler import LambdaLR
 from tqdm import trange
 
-from pytorch_pretrained_bert import BertForTokenClassification
+from transformers import BertForTokenClassification
 
 from data_loader import DataLoader
 from evaluate import evaluate
@@ -20,7 +20,7 @@ import utils
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--data_dir', default='data/msra', help="Directory containing the dataset")
-parser.add_argument('--bert_model_dir', default='bert-base-chinese-pytorch', help="Directory containing the BERT model in PyTorch")
+parser.add_argument('--bert_model_dir', default='bert-base-chinese', help="Directory containing the BERT model in PyTorch")
 parser.add_argument('--model_dir', default='experiments/base_model', help="Directory containing params.json")
 parser.add_argument('--seed', type=int, default=2019, help="random seed for initialization")
 parser.add_argument('--restore_file', default=None,
@@ -51,7 +51,7 @@ def train(model, data_iterator, optimizer, scheduler, params):
 
         # compute model output and loss
         loss = model(batch_data, token_type_ids=None, attention_mask=batch_masks, labels=batch_tags)
-
+        loss=loss[0]
         if params.n_gpu > 1 and args.multi_gpu:
             loss = loss.mean()  # mean() to average on multi-gpu
 
