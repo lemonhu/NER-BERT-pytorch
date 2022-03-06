@@ -69,3 +69,19 @@
 2019-01-25 05:48:44,861:INFO: - Train metrics: loss: 00.00; f1: 99.90
 2019-01-25 05:49:07,503:INFO: - Val metrics: loss: 00.03; f1: 95.88
 2019-01-25 05:49:12,045:INFO: Best val f1: 95.90
+2022-02-05 14:27:16,705:INFO: device: cuda, n_gpu: 1, 16-bits training: False
+2022-02-05 14:27:16,705:INFO: Loading the datasets...
+2022-02-05 14:27:45,285:INFO: device: cuda, n_gpu: 1, 16-bits training: False
+2022-02-05 14:27:45,285:INFO: Loading the datasets...
+2022-02-05 14:28:39,517:INFO: Starting training for 20 epoch(s)
+2022-02-05 14:28:39,517:INFO: Epoch 1/20
+2022-02-05 14:34:00,740:INFO: device: cuda, n_gpu: 1, 16-bits training: False
+2022-02-05 14:34:00,741:INFO: Loading the datasets...
+2022-02-05 14:34:54,650:INFO: Starting training for 20 epoch(s)
+2022-02-05 14:34:54,651:INFO: Epoch 1/20
+2022-02-05 14:40:08,016:INFO: device: cuda, n_gpu: 1, 16-bits training: False
+2022-02-05 14:40:08,017:INFO: Loading the datasets...
+2022-02-05 14:41:01,202:INFO: Starting training for 20 epoch(s)
+2022-02-05 14:41:01,202:INFO: Epoch 1/20
+2022-02-05 14:46:01,254:INFO: device: cuda, n_gpu: 1, 16-bits training: False
+2022-02-05 14:46:01,254:INFO: Loading the datasets...

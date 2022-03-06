@@ -8,7 +8,7 @@ import os
 import numpy as np
 import torch
 
-from pytorch_pretrained_bert import BertForTokenClassification, BertConfig
+from transformers import BertForTokenClassification, BertConfig
 
 from metrics import f1_score
 from metrics import classification_report
@@ -45,6 +45,7 @@ def evaluate(model, data_iterator, params, mark='Eval', verbose=False):
         batch_masks = batch_data.gt(0)
 
         loss = model(batch_data, token_type_ids=None, attention_mask=batch_masks, labels=batch_tags)
+        loss=loss[0]
         if params.n_gpu > 1 and params.multi_gpu:
             loss = loss.mean()
         loss_avg.update(loss.item())
