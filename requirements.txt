@@ -3,7 +3,7 @@ tensorflow >= 1.11.0
 # PyTorch
 torch >= 0.4.1
 # progress bars in model download and training scripts
-tqdm
+tqdm>=4.36.0,<=4.65.0
 # A PyTorch implementation of Google AI's BERT model
 pytorch-pretrained-bert == 0.4.0
 # A tool for easy mixed precision and distributed training in Pytorch, https://github.com/NVIDIA/apex
